@@ -1,5 +1,7 @@
 # IRC Color Code
 
+![Cup](README-cup.png)
+
 ### Installation
 
 You need imagemagick and the rmagick gem installed
