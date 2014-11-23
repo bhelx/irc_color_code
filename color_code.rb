@@ -37,7 +37,10 @@ class MircColor < Struct.new(:r, :g, :b)
 end
 
 image = Magick::Image.read(ARGV[0]).first
-image.scale!(50, 50)
+image.resize_to_fit!(30)
+
+# pixels in irc are roughly 2:1 dimensions
+image.resize!(image.columns * 2, image.rows)
 
 pixels = image.get_pixels(0, 0, image.columns, image.rows)
 
