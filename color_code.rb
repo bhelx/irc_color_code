@@ -37,7 +37,7 @@ class MircColor < Struct.new(:r, :g, :b)
 end
 
 image = Magick::Image.read(ARGV[0]).first
-image.scale!(100, 100)
+image.scale!(50, 50)
 
 pixels = image.get_pixels(0, 0, image.columns, image.rows)
 
